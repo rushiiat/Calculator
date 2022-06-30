@@ -2,61 +2,53 @@ import java.util.Scanner;
 
 public class Calculator {
 
-	public static void main(String[] args) {
-        double c;
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter first number :");
-		double a = sc.nextInt();
-		System.out.println("Enter second number : ");
-		double b = sc.nextInt();
-		
-		
-		
-		System.out.println("1. Addition 2. Subtraction 3. Multiplication 4. Division 5. Percentage");
-		System.out.println("Enter choice : ");
-		int ch = sc.nextInt();
-		
-		
-		switch(ch)
-		{
-		    case 1 :  c = a+b;
-		              System.out.println("Addition is : "+c);
-		              break;
-		              
-		              
-		    case 2 : c = a-b;
-		    		System.out.println("Subtraction is : "+c);
-		            break;
-		            
-		    case 3 : c = a*b;
-    			System.out.println("Multiplication is : "+c);
-    			break;
-    	    
-    			
-		    case 4 : c = a/b;
-		           System.out.println("Division is : "+c);
-		           break;
-		     
-		    case 5 : c = (a/b)*100;
-		    		System.out.println("Percentage is : "+c);
-		    		break;
-		         
-		    default : System.out.println("Invalid ");
-		    
-		
-		}
-		
-		
-		
-		
-		
-		
-	}
-
+	public static double res;
 	public static double add(double a, double b) {
 
-		double sum = a+b;
+		res = a+b;
 		return 0.0;
 	}
+     
+	public static double subt(double a, double b) {
 
+		res = a-b;
+		
+		return 0.0;
+	}
+	   
+	public static double mult(double a, double b) {
+
+		 res = a*b;
+		return 0.0;
+	}
+	
+	public static double div(double a, double b) {
+
+		res = a/b;
+		return 0.0;
+	}
+	public static double display() {
+
+		System.out.println("Result is : "+res);
+		return res;
+	}
+  
+	
+
+	public static void main(String[] args) {
+		double c;
+		Calculator cl = new Calculator();
+		cl.add(20, 30);
+		cl.display();
+		cl.subt(60,20);
+		cl.display();
+		cl.mult(96, 4);
+		cl.display();
+		cl.div(80, 4);
+		cl.display();
+		
+	
+	}
 }
+
+
